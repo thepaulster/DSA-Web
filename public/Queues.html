@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Queues</title>
+	<link rel="stylesheet" href="../stylesheets/styles.css"/>
+	<link rel="stylesheet" href="../stylesheets/stacks.css"/>
+</head>
+<body>
+
+<div class = "topnav">
+			<a class="active" href="../index.html">Home</a>
+			<div class ="dropdown">
+				<button class ="dropbtn">Basic Datastructures
+					<i class ="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href ="Stacks.html">Stacks</a>
+					<a href="Queues.html">Queues</a>
+					<a href="Recursion.html">Recursion</a>
+					<a href="LinkedLists.html">Linked Lists</a>
+					<a href="../TOH.html">Tower Of Hanoi</a>
+					<!--a href="towers-of-hanoi-master/towers-of-hanoi-master/index.html">Tower of Hanoi</a-->
+				</div>
+			</div>
+			<a href ="#trees">Trees</a>
+		</div>
+
+		<div class="col-text" style="padding: 2%">
+		<b>Queues<br></b>
+		<p>
+			A queue is a container of objects (a linear collection) that are inserted and removed according to
+		 	the first-in first-out (FIFO) principle. An excellent example of a queue is a line of students in the
+		  	food court of the UC. New additions to a line made to the back of the queue, while removal (or serving)
+		  	happens in the front. In the queue only two operations are allowed enqueue and dequeue. Enqueue means to
+		  	insert an item into the back of the queue, dequeue means removing the front item. The picture demonstrates
+		  	the FIFO access.
+		</p>
+		<img class="center" src="../images/queue.svg.png" alt="FIFO accee">
+		<p>
+			The difference between stacks and queues is in removal of items. In a stack, items are removed following
+			the LIFO principle that is, the item most recently added is removed first
+			added while in a queue, items are removed following the FIFO principle that is, the first item added gets
+			removed first.
+		</p>
+		</div>
+		<br>
+
+<div class ="container">
+		<form id ="form1">
+			<p>Enter any item to add into the Queue</p>
+			<!-- Input field-->
+			<input id="input" type="text" name="name" size="20">
+		</form>
+		<br>
+		<button onclick="push()">Enqueue</button>
+		<button onclick="pop()">Dequeue</button>
+		<button onclick="front()">Front</button>
+		<button onclick="size()">Size</button>
+		<button onclick="isEmpty()">isEmpty</button>
+</div>
+
+<br>
+
+<p id="demo" class="democlass"></p>
+
+</body>
+
+<script type="text/javascript" src="../js/queues.js"></script>
+
+</html>

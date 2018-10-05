@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>LinkedLists</title>
+		<link rel="stylesheet" href="../stylesheets/styles.css"/>
+		<link rel="stylesheet" href="../stylesheets/stacks.css"/>
+	</head>
+	<body>
+		<div class = "topnav">
+			<a class="active" href="../index.html">Home</a>
+			<div class ="dropdown">
+				<button class ="dropbtn">Basic Datastructures
+					<i class ="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href ="Stacks.html">Stacks</a>
+					<a href="Queues.html">Queues</a>
+					<a href="Recursion.html">Recursion</a>
+					<a href="LinkedLists.html">Linked Lists</a>
+					<a href="../TOH.html">Tower Of Hanoi</a>
+					<!--a href="towers-of-hanoi-master/towers-of-hanoi-master/index.html">Tower of Hanoi</a-->
+				</div>
+			</div>
+			<a href ="#trees">Trees</a>
+		</div>
+
+		<div class="col-text" style="padding: 2%">
+			<b>Linked Lists</b><br><br>
+
+			One disadvantage of using arrays to store data is that arrays are static structures and therefore cannot
+			be easily extended or reduced to fit the data set. Arrays are also expensive to maintain new insertions
+			and
+			deletions. In this chapter we consider another data structure called Linked Lists that addresses some of
+			the limitations of arrays.A linked list is a linear data structure where each element is a separate object.
+			<br>
+			<br>
+
+			Each element (we will call it a node) of a list is comprising of two items - the data and a reference to
+			the next node. The last node has a reference to null. The entry point into a linked list is called the head
+			of the list. It should be noted that head is not a separate node, but the reference to the first node.
+			If the
+			list is empty then the head is a null reference.
+			A linked list is a dynamic data structure. The number of nodes in a list is not fixed and can grow and
+			 shrink
+			on demand. Any application which has to deal with an unknown number of objects will need to use a linked
+			list.
+			<br>
+
+			One disadvantage of a linked list against an array is that it does not allow direct access to the
+			individual
+			elements. If you want to access a particular item then you have to start at the head and follow the
+			references until you get to that item.<br>
+
+			Another disadvantage is that a linked list uses more memory compare with an array - we extra 4 bytes
+			(on 32-bit CPU) to store a reference to the next node.
+			<br>
+		</div>
+
+		<br>
+		<div class ="container">
+			<form id ="form1">
+			<p>Enter any item to add into the Linked List</p><input type="text" name="name" size="20">
+			</form><br>
+				<button onclick="push()">Add</button>
+				<button onclick="pop()">RemoveAt</button>
+				<button onclick="peek()">Peek</button>
+				<button onclick="size()">Size</button>
+				<button onclick="indexOf()">indexOf</button>
+		</div>
+
+		<br>
+
+		<p id="demo" class="democlass"></p>
+	</body>
+
+<script type="text/javascript" src="../js/linkedLists.js"></script>
+
+</html>

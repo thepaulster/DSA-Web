@@ -1,62 +1,145 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <title>Towers of Hanoi</title>
-    <script type="text/javascript" src="javascripts/miscellany.js"></script>
-    <script type="text/javascript" src="javascripts/game.js"></script>
-    <script type="text/javascript" src="javascripts/debug.js"></script>
-    <script type="text/javascript" src="javascripts/input_handler.js"></script>
-    <script type="text/javascript" src="javascripts/point.js"></script>
-    <script type="text/javascript" src="javascripts/element_coordinate_finder.js"></script>
-    <script type="text/javascript" src="javascripts/tower_manager.js"></script>
-    <script type="text/javascript" src="javascripts/game_state.js"></script>
-    <script type="text/javascript" src="javascripts/victory_celebrator.js"></script>
-    <script type="text/javascript" src="javascripts/tower.js"></script>
-    <script type="text/javascript" src="javascripts/disk.js"></script>
-    <script type="text/javascript" src="javascripts/canvas.js"></script>
-    <script type="text/javascript" src="javascripts/colour.js"></script>
-    <script type="text/javascript" src="javascripts/init.js"></script>
-    <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
-  </head>
 
-  <body>
-<div class = "topnav">
-			<a class="active" href="index.html">Home</a>
-			<div class ="dropdown">
-				<button class ="dropbtn">Basic Datastructures
-					<i class ="fa fa-caret-down"></i>
-				</button>
-				<div class="dropdown-content">
-					<a href ="Stacks.html">Stacks</a>
-					<a href="Queues.html">Queues</a>
-					<a href="Recursion.html">Recursion</a>
-					<a href="LinkedLists.html">Linked Lists</a>
-					<a href="towers-of-hanoi-master/towers-of-hanoi-master/index.html">Tower of Hanoi</a>
-				</div>
-			</div>			
-			<a href ="#trees">Trees</a>
-		</div>
-  	
-    <canvas id="canvas" width="600" height="300"></canvas>
-    <div id="introduction">
-      <div id="introduction-message">
-        <h1>The Towers of Hanoi</h1>
-        <p>Your objective in <a href="http://en.wikipedia.org/wiki/Tower_of_Hanoi">Towers of Hanoi</a> is simple: move
-          your entire stack of disks from the first tower to one of the other two towers. There's only one
-          catch&mdash;you may not place a larger disk on top of a smaller one.</p>
-        <input id="start-new-game" type="button" value="Start game" />
+<head>
+  <title>DataStructures and Algorithms</title>
+  <link rel="stylesheet" href="./stylesheets/styles.css" />
+
+  <!-- <meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+</head>
+
+<body>
+  <div class="topnav">
+    <a class="active" href="./index.html">Home</a>
+
+    <div class="dropdown">
+      <button class="dropbtn">Basic Datastructures
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="public/Stacks.html">Stacks</a>
+        <a href="public/Queues.html">Queues</a>
+        <a href="public/Recursion.html">Recursion</a>
+        <a href="public/LinkedLists.html">Linked Lists</a>
+        <a href="TOH.html">Tower of hanoi</a>
       </div>
     </div>
-    <div id="victory-notification">
-      <div id="victory-message">
-        <h1>Victory!</h1>
-        <p>Congratulations! You just
-          <a href="http://en.wikipedia.org/wiki/Towers_of_hanoi#Origins">ended the world</a>.</p>
-        <p><input id="play-again" type="button" value="Play again" /> with
-          <input id="disks-count" type="text" size="2" maxlength="2" value="3" /> disks.</p>
+    <a href="#trees">Trees</a>
+  </div>
+  <div class="parallax"></div>
+
+  <section class="container">
+
+    <div class="col-text" style="padding: 2%">
+
+      Data Structures are the programmatic way of storing data so that data can be used efficiently. Almost every
+      enterprise application uses various types of data structures in one or the other way. Data structures have gained
+      significant importance because of their usage in several disciplines. Data structures are integral part of modern
+      operating systems, compilers, database Management systems, data communications and so on<br><br>
+
+      Algorithm is a step-by-step procedure, which defines a set of instructions to be executed in a certain order to
+      get the desired output. Algorithms are generally created independent of underlying languages, i.e. an algorithm
+      can be implemented in more than one programming language.<br><br><br>
+
+
+      Examples of data structure include Arrays, stack, queues, linked lists, hash tables e.t.c which are used to store
+      data in an organized way such that it can be used efficiently.<br>
+
+      <div class="gallery">
+        <a target="_blank" href="../Images/img1.png">
+          <img src="../Images/img1.png" alt="Forest" width="300" height="200">
+        </a>
+        <div class="desc">Stacks</div>
       </div>
+      <div class="gallery">
+        <a target="_blank" href="../Images/queues.png">
+          <img src="../Images/queues.png" alt="Forest" width="300" height="200">
+        </a>
+        <div class="desc">Queues</div>
+      </div>
+      <div class="gallery">
+        <a target="_blank" href="../Images/tree.jpg">
+          <img src="../Images/tree.jpg" alt="Forest" width="300" height="200">
+        </a>
+        <div class="desc">Trees</div>
+      </div>
+      <div class="gallery">
+        <a target="_blank" href="../Images/Linkedlist.png">
+          <img src="../Images/Linkedlist.png" alt="Forest" width="300" height="200">
+        </a>
+        <div class="desc">Linked Lists</div>
+      </div>
+      <br><br><br><br><br><br><br><br><br><br>
+
+
+
+      Examples of algorithms may include searching algorithms, sorting algorithms, divide and conquer, back tracking,
+      greedy algorithms e.t.c which can operate on the data structures in order to produce results.<br>
+
+      Algorithms together with data structures have wide spread use in several applications. These include: image
+      processing, digital signal processing, simulation, numerical computations, cryptography, data compressions and
+      genetic studies.<br>
+
+      This means that data structure and algorithms are closely related. The data structure you choose directly affect
+      the algorithm that will be used and vice versa<br>
+
+      Understanding data structures and algorithms might seem unnecessary in an age where you'll be using library
+      functions for 90% of your coding. Why then should you bother to learn the implementation, when the implementation
+      is hidden from you behind an abstraction?<br>
+
+      You must learn data structures and algorithms, so that you understand the logic behind the behaviour of these
+      abstractions. If you don't, you will eventually apply them in a way that will hurt you.<br>
+
+      Understanding algorithms lets you understand the problems those algorithms were built to overcome. That
+      understanding will help you immensely in your dat-to-day Work, because those problems are basic logic and
+      computer science problems that pop up everywhere, no matter if you're working on business software, hardware
+      drivers, games or mobile apps.<br>
+
+      We also need to tell why certain algorithms that do solve similar/same problem may be better than the other in
+      terms of speed and space utilization<br>
+
+      In simple terms programs are comprised of two things: data and algorithms. The algorithms describe the way the
+      data is to be transformed. The reason for learning about data structures is because adding structure to our data
+      can make the algorithms much simpler, easier to maintain, and often faster.
+
+      <hr>
+      <dl><dt>
+          <ul id="group">
+            <ol>GROUP MEMBERS:</ol>
+            <li>
+              <ol>ASIIMWE PAUL</ol>
+              <ol>16/U/3720/PS</ol>
+              <ol>216010754</ol>
+            </li>
+            <li>
+              <ol>MOKILI ISAAC JANDA</ol>
+              <ol>16/U/7096/PS</ol>
+              <ol>216013042</ol>
+            </li>
+            <li>
+              <ol>NABENDE EDWARD</ol>
+              <ol>16/U/8095/PS</ol>
+              <ol>216012611</ol>
+            </li>
+            <li>
+              <ol>OCAN JOEL CRAWFORD</ol>
+              <ol>16/U/10705/PS</ol>
+              <ol>216009506</ol>
+            </li>
+            <li>
+              <ol>AKOLL CARLTON NOEL</ol>
+              <ol>16/U/3227/PS</ol>
+              <ol>216018372</ol>
+            </li>
+          </ul>
+        </dt></dl>
     </div>
-    <div id="debug"></div>
-  </body>
+
+  </section>
+</body>
+
 </html>
